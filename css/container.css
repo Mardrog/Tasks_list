@@ -1,0 +1,36 @@
+.container__AddTaskSection {
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.container__TasksListSection {
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
+    height: 150px;
+}
+
+.container__header {
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
+}
+
+.container__input {
+    flex-grow: 1;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #dddddd;
+}
+
+.container__button {
+    margin: 10px;
+    color: white;
+    padding: 10px;
+    background-color: teal;
+    border: none;
+}
+
+.container__form {
+    display: flex;
+    padding: 10px;
+}

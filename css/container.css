@@ -1,3 +1,8 @@
+.container{
+    max-width: 1000px;
+    margin:auto;
+    padding:10px
+}
 .container__AddTaskSection {
     background-color: white;
     margin-bottom: 10px;
@@ -33,4 +38,11 @@
 .container__form {
     display: flex;
     padding: 10px;
+}
+
+@media (max-width:405px){
+    .container__form {
+        display: flex;
+        flex-direction:column;
+        padding: 10px;
 }

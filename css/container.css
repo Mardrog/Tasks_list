@@ -1,17 +1,17 @@
-.container{
+.container {
     max-width: 1000px;
-    margin:auto;
-    padding:10px
+    margin: auto;
+    padding: 10px;
 }
+
 .container__AddTaskSection {
     background-color: white;
     margin-bottom: 10px;
 }
 
-.container__TasksListSection {
+.container__tasksListSection {
     background-color: white;
     border-bottom: 1px solid #dddddd;
-    height: 150px;
 }
 
 .container__header {
@@ -39,10 +39,21 @@
     display: flex;
     padding: 10px;
 }
-
-@media (max-width:405px){
+.container__taskList{
+    list-style: none;
+}
+.container__button--checkBoxTask{
+    background-color:green;
+    color:white;
+}
+.container__button--deleteTask{
+    background-color: red;
+    color:white;
+}
+@media (max-width:405px) {
     .container__form {
         display: flex;
-        flex-direction:column;
+        flex-direction: column;
         padding: 10px;
+    }
 }

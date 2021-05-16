@@ -44,6 +44,16 @@
     list-style: none;
 }
 
+.container__checkTask {
+    background-color: green;
+    color: white;
+}
+
+.container__deleteTask {
+    background-color: red;
+    color: white;
+    
+}
 
 @media (max-width:405px) {
     .container__form {

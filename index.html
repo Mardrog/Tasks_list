@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/container.css" rel="stylesheet">
+    <script src="script/script.js" defer></script>
 
     <title>Tasks List</title>
 </head>
@@ -25,17 +26,18 @@
         <main class="container">
             <section class="container__AddTaskSection">
                 <h2 class="container__header">Dodaj nowe zdanie</h2>
-                <form class="container__form">
-                    <input class="container__input" placeholder="Co jest do zrobienia?" autofocus>
-                    <button class="container__button">Dodaj zadanie</button>
+                <form class="container__form js-form">
+                    <input class="container__input js-newTask" placeholder="Co jest do zrobienia?" autofocus>
+                    <button class="container__newTask js-newTask">Dodaj zadanie</button>
                 </form>
             </section>
             <section class="container__tasksListSection">
                 <h2 class="container__header">Lista zadań</h2>
 
-                <ul class="container__taskList">
+                <ul class="container__taskList js-tasks">
 
                 </ul>
+
 
             </section>
         </main>

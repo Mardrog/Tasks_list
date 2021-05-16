@@ -1,0 +1,71 @@
+.section__header {
+    font-size: 30px;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
+    margin: 0px;
+}
+
+.section__input {
+    margin-right: 20px;
+    padding: 10px;
+    flex-grow: 1;
+    border: 1px solid #dddd;
+}
+
+.section__newTaskButton {
+    padding: 10px 30px 10px 30px;
+    color: white;
+    background-color: teal;
+    border: none;
+}
+
+.section__newTaskButton:hover {
+    background-color: rgb(3, 170, 170);
+}
+
+.section__form {
+    background-color: white;
+    display: flex;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.section__tasksList {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: white;
+    padding: 40px;
+    margin: 0px;
+}
+
+.section__newTask {
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+
+.section__checkTask {
+    background-color: green;
+    color: white;
+}
+
+.section__textDecoration {
+    text-decoration: line-through;
+}
+
+.section__deleteTask {
+    align-self: flex-end;
+    background-color: red;
+    color: white;
+}
+
+@media (max-width:405px) {
+    .section__form {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+}

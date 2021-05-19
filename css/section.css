@@ -6,24 +6,6 @@
     margin: 0px;
 }
 
-.section__input {
-    margin-right: 20px;
-    padding: 10px;
-    flex-grow: 1;
-    border: 1px solid #dddd;
-}
-
-.section__newTaskButton {
-    padding: 10px 30px 10px 30px;
-    color: white;
-    background-color: teal;
-    border: none;
-}
-
-.section__newTaskButton:hover {
-    background-color: rgb(3, 170, 170);
-}
-
 .section__form {
     background-color: white;
     display: flex;
@@ -31,13 +13,35 @@
     margin-bottom: 30px;
 }
 
+.section__input {
+    margin-right: 20px;
+    padding: 10px;
+    flex-grow: 1;
+    border: 1px solid #dddd;
+}
+
 .section__tasksList {
-    display: flex;
-    flex-direction: column;
     list-style: none;
     background-color: white;
-    padding: 40px;
     margin: 0px;
+}
+
+.section__tasksListItem {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.section__newTaskButton {
+    padding: 10px 30px 10px 30px;
+    color: white;
+    background-color: hsl(180, 100%, 25%);
+    border: none;
+    transition: 1s;
+}
+
+.section__newTaskButton:hover {
+    background-color: hsl(180, 100%, 35%);
 }
 
 .section__newTask {
@@ -47,19 +51,44 @@
     border: none;
 }
 
-.section__checkTask {
-    background-color: green;
+.section__taskButton {
+    height: 30px;
+    width: 30px;
+    border: none;
     color: white;
+    transition: 1s;
 }
 
-.section__textDecoration {
+.section__taskButton--checked {
+    background-color: hsl(120, 100%, 25%);
+}
+
+.section__taskButton--checked:hover {
+    background-color: hsl(120, 100%, 35%);
+}
+
+.section__taskButton--deleted {
+    background-color: hsl(0, 100%, 50%);
+}
+
+.section__taskButton--deleted:hover {
+    background-color: hsl(0, 100%, 60%);
+}
+
+.section__task {
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.section__task--completed {
+text-decoration: line-through;
+}
+.section__taskContent {
+    flex-grow: 1;
+}
+
+.section__taskDecoration {
     text-decoration: line-through;
-}
-
-.section__deleteTask {
-    align-self: flex-end;
-    background-color: red;
-    color: white;
 }
 
 @media (max-width:405px) {

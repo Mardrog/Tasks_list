@@ -20,6 +20,19 @@
     border: 1px solid #dddd;
 }
 
+.section__newTaskButton {
+    padding: 10px 30px 10px 30px;
+    color: white;
+    background-color: hsl(180, 100%, 25%);
+    border: none;
+    transition: 0.5s;
+}
+
+.section__newTaskButton:hover {
+    background-color: hsl(180, 100%, 35%);
+    transform: scale(1.1);
+}
+
 .section__tasksList {
     list-style: none;
     background-color: white;
@@ -33,18 +46,9 @@
     border-bottom: 1px solid #dddddd;
 }
 
-.section__newTaskButton {
-    padding: 10px 30px 10px 30px;
-    color: white;
-    background-color: hsl(180, 100%, 25%);
-    border: none;
-    transition: 0.5s;
-    
-}
-
-.section__newTaskButton:hover {
-    background-color: hsl(180, 100%, 35%);
-    transform: scale(1.1);
+.section__tasksContainer {
+    background-color: white;
+    height: 60px;
 }
 
 .section__taskButton {
@@ -81,14 +85,6 @@
 }
 
 .section__task--completed {
-    text-decoration: line-through;
-}
-
-.section__taskContent {
-    flex-grow: 1;
-}
-
-.section__taskDecoration {
     text-decoration: line-through;
 }
 

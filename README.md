@@ -11,7 +11,7 @@
  ## [DEMO](https://mardrog.github.io/Tasks_list/)
 
 ## Project purpose
-This site was created to learn mainly using functions in javasrpit. I'am creating here empty table and function which render whole html which is shown as a tasks list. Other functions are here to for example delete task or check which one is done. 
+This site was created to learn mainly using functions in javasrpit. I'am creating here empty table and function which render whole html which is shown as a tasks list. Other functions are used for deleting assignments and marking these which are already done. 
 
 ## How to use
  1. Step one: </br>

@@ -9,8 +9,8 @@
 .section__form {
     background-color: white;
     display: flex;
-    padding: 10px;
-    margin-bottom: 30px;
+    padding: 20px;
+    margin-bottom: 10px;
 }
 
 .section__input {
@@ -38,11 +38,13 @@
     color: white;
     background-color: hsl(180, 100%, 25%);
     border: none;
-    transition: 1s;
+    transition: 0.5s;
+    
 }
 
 .section__newTaskButton:hover {
     background-color: hsl(180, 100%, 35%);
+    transform: scale(1.1);
 }
 
 .section__taskButton {
@@ -56,6 +58,7 @@
 
 .section__task {
     flex-grow: 1;
+    align-self: center;
     word-break: break-all;
     margin-left: 10px;
     margin-right: 10px;

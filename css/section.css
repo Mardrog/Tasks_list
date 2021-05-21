@@ -53,6 +53,7 @@
 
 .section__taskButton {
     height: 30px;
+    align-self: center;
     width: 30px;
     border: none;
     color: white;
@@ -99,8 +100,5 @@
     }
     .section__input {
         margin: 10px;
-    }
-    .section__taskButton {
-        align-self: center;
     }
 }

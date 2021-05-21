@@ -24,6 +24,7 @@
     list-style: none;
     background-color: white;
     margin: 0px;
+    padding: 0;
 }
 
 .section__tasksListItem {
@@ -44,19 +45,20 @@
     background-color: hsl(180, 100%, 35%);
 }
 
-.section__newTask {
-    background-color: teal;
-    color: white;
-    padding: 10px;
-    border: none;
-}
-
 .section__taskButton {
     height: 30px;
     width: 30px;
     border: none;
     color: white;
     transition: 1s;
+    flex-shrink: 0;
+}
+
+.section__task {
+    flex-grow: 1;
+    word-break: break-all;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .section__taskButton--checked {
@@ -75,14 +77,10 @@
     background-color: hsl(0, 100%, 60%);
 }
 
-.section__task {
-    flex-grow: 1;
-    margin-left: 10px;
-    margin-right: 10px;
-}
 .section__task--completed {
-text-decoration: line-through;
+    text-decoration: line-through;
 }
+
 .section__taskContent {
     flex-grow: 1;
 }
@@ -91,10 +89,19 @@ text-decoration: line-through;
     text-decoration: line-through;
 }
 
-@media (max-width:405px) {
+@media (max-width:580px) {
     .section__form {
         display: flex;
         flex-direction: column;
         padding: 10px;
+    }
+    .section__newTaskButton {
+        margin: 10px;
+    }
+    .section__input {
+        margin: 10px;
+    }
+    .section__taskButton {
+        align-self: center;
     }
 }

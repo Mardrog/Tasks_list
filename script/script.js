@@ -5,7 +5,7 @@
         for (const task of tasks) {
             htmlString += `
                 <li class = "section__tasksListItem">
-                   <button class = "section__taskButton section__taskButton--checked js-checkTask ">${task.done ? "✔" : ""}</button> <span class = "section__task js-task ${task.done ? "section__task--completed" : ""}">${task.content} </span> <button class = "section__taskButton section__taskButton--deleted js-deleteTask">🗑</delete>
+                   <button class = "section__taskButton section__taskButton--checked js-checkTask ">${task.done ? "✔" : ""}</button><span class = "section__task js-task ${task.done ? "section__task--completed" : ""}">${task.content} </span><button class = "section__taskButton section__taskButton--deleted js-deleteTask">🗑</delete>
                 </li >
         `;
         }

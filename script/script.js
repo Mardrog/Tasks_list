@@ -2,7 +2,7 @@
 let tasks = [];
 
 const renderButtons = () => {
-    document.querySelector(".js-buttons").innerHTML = `<button class = "section__buttons"> Ukryj ukończone </buttons> <button class = "section__buttons section__buttons--rightButton"> Ukończ wszystkie </buttons>`;
+    document.querySelector(".js-buttons").innerHTML = `<button class = "section__buttons section__buttons--leftButton"> Ukryj ukończone </buttons> <button class = "section__buttons section__buttons--rightButton"> Ukończ wszystkie </buttons>`;
 };
 
 const addNewTask = (newTaskContent) => {

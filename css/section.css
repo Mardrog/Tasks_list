@@ -24,8 +24,8 @@
     color: hsl(180, 100%, 25%);
 }
 
-.section__buttons--rightButton {
-    padding-left: 30px;
+.section__buttons--leftButton {
+    padding-right: 30px;
 }
 
 .section__buttons:hover {
@@ -127,5 +127,22 @@
     }
     .section__input {
         margin: 10px;
+    }
+}
+
+@media (max-width:675px) {
+    .section__container {
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    .section__buttonsContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .section__buttons--leftButton {
+        padding: 0px;
+        margin-bottom: 30px;
     }
 }

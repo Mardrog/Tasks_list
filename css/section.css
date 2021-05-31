@@ -13,8 +13,8 @@
 
 .section__buttonsContainer {
     background-color: white;
-    align-self: center;
     padding: 20px;
+    border-bottom: 1px solid #dddddd;
 }
 
 .section__buttons {
@@ -91,7 +91,6 @@
 .section__task {
     flex-grow: 1;
     align-self: center;
-    word-break: break-all;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -145,4 +144,11 @@
         padding: 0px;
         margin-bottom: 30px;
     }
+}
+
+.section__buttons--rightButton:disabled {
+    color: grey;
+    font-size: 25px;
+    border: none;
+    background: none;
 }

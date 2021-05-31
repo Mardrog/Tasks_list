@@ -72,6 +72,10 @@
     border-bottom: 1px solid #dddddd;
 }
 
+.section__tasksListItem--hidden {
+    display: none;
+}
+
 .section__tasksContainer {
     background-color: white;
     height: 60px;

@@ -1,6 +1,6 @@
 {
     let tasks = [];
-
+    let hideDoneTasks = false;
     const addNewTask = (newTaskContent) => {
         tasks = [
             ...tasks,
@@ -36,6 +36,18 @@
             done: true,
         }));
         render();
+    };
+
+    const toggleHideTasksDone = () => {
+        hideDoneTasks = !hideDoneTasks;
+        render();
+    };
+
+    bindToggleHideTasksDoneEvent = () => {
+        const hideAllDoneTasksButton = document.querySelector(".js-hideAllDoneTasks");
+        hideAllDoneTasksButton.addEventListener("click", () => {
+            toggleHideTasksDone();
+        });
     };
 
     bindToggleTasksDone = () => {
@@ -79,7 +91,7 @@
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
-                <li class = "section__tasksListItem">
+                <li class = "section__tasksListItem ${hideDoneTasks === true && task.done ? "section__tasksListItem--hidden" : ""}">
                    <button class = "section__taskButton section__taskButton--checked js-done">
                    ${task.done ? "✔" : ""}
                    </button>
@@ -100,7 +112,7 @@
         if (tasks.length !== 0) {
             htmlButtons += `
             <button class = "section__buttons section__buttons--leftButton js-hideAllDoneTasks"> 
-                Ukryj ukończone 
+                ${hideDoneTasks === true ? "Pokaż ukończone" : "Ukryj ukończone"} 
             </buttons> 
             <button class = "section__buttons section__buttons--rightButton js-setAllTasksAsDone"> 
             Ukończ wszystkie
@@ -115,6 +127,7 @@
         bindDeleteTasksEvent();
         bindFinishAllTasksEvent();
         disabledButton();
+        bindToggleHideTasksDoneEvent();
     };
 
     const onFormSubmit = (event) => {
@@ -142,6 +155,5 @@
 
     init();
 }
-
 
 

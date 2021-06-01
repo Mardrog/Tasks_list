@@ -1,6 +1,7 @@
 {
     let tasks = [];
     let hideDoneTasks = false;
+
     const addNewTask = (newTaskContent) => {
         tasks = [
             ...tasks,
@@ -51,7 +52,7 @@
     };
 
     bindToggleTasksDone = () => {
-        const toggleCheckedTaskButton = document.querySelectorAll(".js-done");
+        const toggleCheckedTaskButton = document.querySelectorAll(".js-select");
 
         toggleCheckedTaskButton.forEach((toggleTask, index) => {
             toggleTask.addEventListener("click", () => {
@@ -90,7 +91,7 @@
         for (const task of tasks) {
             htmlString += `
                 <li class = "section__tasksListItem ${hideDoneTasks === true && task.done ? "section__tasksListItem--hidden" : ""}">
-                   <button class = "section__taskButton section__taskButton--checked js-done">
+                   <button class = "section__taskButton section__taskButton--checked js-select">
                    ${task.done ? "✔" : ""}
                    </button>
                    <span class = "section__task js-task ${task.done ? "section__task--completed" : ""}">

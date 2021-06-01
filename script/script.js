@@ -81,10 +81,8 @@
     };
 
     const disabledButton = () => {
-        if (tasks.every(task => task.done === true)) {
-            document.querySelector(".section__buttons--rightButton").disabled = true;
-            return;
-        };
+        tasks.every(task => task.done === true) ? document.querySelector(".section__buttons--rightButton").disabled = true : "";
+        return;
     };
 
     const renderTask = () => {

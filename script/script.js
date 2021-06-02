@@ -81,7 +81,9 @@
     };
 
     const disabledButton = () => {
-        tasks.every(task => task.done === true) ? document.querySelector(".section__buttons--rightButton").disabled = true : "";
+        if (tasks.every(task => task.done)) {
+            document.querySelector(".section__buttons--rightButton").disabled = true
+        };
         return;
     };
 
@@ -89,7 +91,7 @@
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
-                <li class = "section__tasksListItem ${hideDoneTasks === true && task.done ? "section__tasksListItem--hidden" : ""}">
+                <li class = "section__tasksListItem ${hideDoneTasks && task.done ? "section__tasksListItem--hidden" : ""}">
                    <button class = "section__taskButton section__taskButton--checked js-select">
                         ${task.done ? "✔" : ""}
                    </button>

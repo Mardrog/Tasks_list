@@ -21,14 +21,13 @@
         render();
     };
 
-    const toggleTaskDone = (index) => {
-        tasks = [
-            ...tasks.slice(0, index),
-            { ...tasks[index], done: !tasks[index].done },
-            ...tasks.slice(index + 1),
-        ];
-        render();
 
+    const toggleTaskDone = (taskIndex) => {
+        tasks = tasks.map((task, index) =>
+            index === taskIndex ?
+                { ...task, done: !task.done }
+                : task);
+        render();
     };
 
     const finishAllTasks = () => {
@@ -92,13 +91,13 @@
             htmlString += `
                 <li class = "section__tasksListItem ${hideDoneTasks === true && task.done ? "section__tasksListItem--hidden" : ""}">
                    <button class = "section__taskButton section__taskButton--checked js-select">
-                   ${task.done ? "✔" : ""}
+                        ${task.done ? "✔" : ""}
                    </button>
                    <span class = "section__task js-task ${task.done ? "section__task--completed" : ""}">
-                   ${task.content} 
+                        ${task.content} 
                    </span>
                    <button class = "section__taskButton section__taskButton--deleted js-deleteTask">
-                   🗑
+                        🗑
                    </delete>
                 </li >
                         `;

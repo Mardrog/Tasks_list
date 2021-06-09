@@ -100,7 +100,7 @@
                    </span>
                    <button class = "section__taskButton section__taskButton--deleted js-deleteTask">
                         🗑
-                   </delete>
+                   </button>
                 </li >
                         `;
         };
@@ -113,10 +113,10 @@
             htmlButtons += `
             <button class = "section__buttons section__buttons--leftButton js-hideAllDoneTasks"> 
                 ${hideDoneTasks === true ? "Pokaż ukończone" : "Ukryj ukończone"} 
-            </buttons> 
+            </button> 
             <button class = "section__buttons section__buttons--rightButton js-setAllTasksAsDone"> 
-            Ukończ wszystkie
-            `
+            Ukończ wszystkie </button>
+            ` 
             document.querySelector(".section__buttonsContainer").innerHTML = htmlButtons;
         };
     };

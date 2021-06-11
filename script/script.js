@@ -43,11 +43,13 @@
         render();
     };
 
-    bindToggleHideTasksDoneEvent = () => {
-        const hideAllDoneTasksButton = document.querySelector(".js-hideAllDoneTasks");
-        hideAllDoneTasksButton.addEventListener("click", () => {
-            toggleHideTasksDone();
-        });
+    const disabledButton = () => {
+        const setAllTasksAsDone = document.querySelector(".section__buttons--rightButton");
+
+        if (tasks.every(task => task.done) && setAllTasksAsDone) {
+            document.querySelector(".js-setAllTasksAsDone").disabled = true
+        };
+        return;
     };
 
     bindToggleTasksDone = () => {
@@ -70,22 +72,24 @@
         });
     };
 
-    bindFinishAllTasksEvent = () => {
+    bindButtonsEvents = () => {
         const setAllTasksAsDone = document.querySelector(".section__buttons--rightButton");
-        if (tasks.length !== 0) {
+        const hideAllDoneTasksButton = document.querySelector(".js-hideAllDoneTasks");
+
+        if (setAllTasksAsDone && hideAllDoneTasksButton) {
             setAllTasksAsDone.addEventListener("click", () => {
                 finishAllTasks();
+            });
+
+
+            hideAllDoneTasksButton.addEventListener("click", () => {
+                toggleHideTasksDone();
             });
             return;
         };
     };
 
-    const disabledButton = () => {
-        if (tasks.every(task => task.done)) {
-            document.querySelector(".section__buttons--rightButton").disabled = true
-        };
-        return;
-    };
+
 
     const renderTask = () => {
         let htmlString = "";
@@ -116,18 +120,18 @@
             </button> 
             <button class = "section__buttons section__buttons--rightButton js-setAllTasksAsDone"> 
             Ukończ wszystkie </button>
-            ` 
-            document.querySelector(".section__buttonsContainer").innerHTML = htmlButtons;
+            `
         };
+
+        document.querySelector(".section__buttonsContainer").innerHTML = htmlButtons;
     };
     const render = () => {
         renderTask();
         renderButtons();
         bindToggleTasksDone();
         bindDeleteTasksEvent();
-        bindFinishAllTasksEvent();
         disabledButton();
-        bindToggleHideTasksDoneEvent();
+        bindButtonsEvents();
     };
 
     const onFormSubmit = (event) => {

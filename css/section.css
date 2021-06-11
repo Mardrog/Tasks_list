@@ -58,6 +58,10 @@
     background: none;
 }
 
+.section__buttons--rightButton:disabled:hover {
+    color: grey;
+}
+
 .section__buttons:hover {
     color: hsl(180, 100%, 35%);
 }
